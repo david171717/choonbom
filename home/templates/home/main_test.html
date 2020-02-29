@@ -1,0 +1,20 @@
+{% load staticfiles %}
+{% load socialaccount %}	
+{% providers_media_js %}
+
+<h1> hello world! </h1>
+
+<a href="/accounts/signup">회원가입</a> <br>
+<!--자동적으로 사이트가 만들어짐-->
+
+{%if user.is_authenticated %}
+<!--로그인이 되어 있다면 if문을 실행해라-->
+<a href="/accounts/logout">로그아웃</a> <br>
+{{user.username}} 님이 로그인 중
+<!--해당 유저가 로그인중임을 표시-->
+
+{% else %}
+<a href = "{% provider_login_url 'google' %}"> 구글 로그인 </a> <br>
+로그인해야함
+<!--로그인해야한다고 알려줌 provider_login_url을 위해서 socialaccount를 가져옴-->
+{% endif %}

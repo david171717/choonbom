@@ -1,0 +1,21 @@
+{% load staticfiles %}
+{% load socialaccount %}
+{% providers_media_js %}
+
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>choonbom</title>
+		<link rel="stylesheet" type="text/css" href='{% static "css/styles.css" %}'>
+
+		<!-- <link rel="preload" as="font" href='{% static "font/MapoFlowerIslandA.woff)" %}' type="font/woff" crossorigin="anonymous"> -->
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	
+	{% block content %}
+	{% endblock %}
+
+</html>

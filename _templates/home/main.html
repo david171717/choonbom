@@ -1,0 +1,33 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>choonbom</title>
+		<link rel="stylesheet" type="text/css" href='{% static "css/styles.css" %}'>
+
+		<!-- <link rel="preload" as="font" href='{% static "font/MapoFlowerIslandA.woff)" %}' type="font/woff" crossorigin="anonymous"> -->
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<div id = "header">
+			<img style="margin-top:100px" src='{% static "img/logo1.svg" %}' class="logo mid" alt="춘;봄">
+		</div>
+		<div id = "content">
+			<div><svg class="shrt-line mid"></svg></div>
+			<div class="subtitle">
+				정성스런 청첩장을 쉽고 간편하게
+			</div>
+			<!-- <div><title class="mid">나와랏!</title></div> -->
+			<span class="small"></span>
+			<div class="space-large">
+				<button class = "fab-bg mid" onclick="window.location.href = 'signin_complete.html';">구글 아이디로<br>회원가입하기
+				</button>
+				<div class="subtitle" style="margin-top: 40px;">
+					이미 회원이신가요?
+				</div>
+				<a class="flat-btn mid" href="login.html">로그인하기 </a></div>
+			</div>
+		</div>
+	</body>
+</html>
