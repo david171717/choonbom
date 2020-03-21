@@ -8,8 +8,7 @@ body > * {
 /* 폰트 속성 */
 @font-face {
   font-family: "MapoFlowerIsland";
-  /*src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoFlowerIslandA.woff") format("woff");*/
-  src: url("../font/MapoFlowerIslandA.woff") format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoFlowerIslandA.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -42,26 +41,45 @@ h1 {
   color: #202020;
 }
 
-.shrt-line {
-  width: 32px;
-  height: 1px;
-  background-color: #3b3f4f;
+.string-line {
+  width: 1px;
+  height: 90px;
+  background-color: #9398af;
 }
 
-.flat-btn {
+.btn-flat {
   font-family: AppleSDGothicNeo;
   font-size: 13.5px;
   font-weight: 500;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: ㄻ normal;
   letter-spacing: 0.55px;
   text-align: center;
   color: #202020;
 }
 
+.btn-flat-lv2 {
+  font-family: AppleSDGothicNeo;
+  font-size: 13.5px;
+  font-weight: 500;
+  letter-spacing: 0.55px;
+  text-align: center;
+  color: #202020;
+  font-weight: 400;
+  color: #9398af;
+}
+
+.small {
+  width: 32px;
+  height: 1px;
+  background-color: #3b3f4f;
+}
+
 .avatar {
   border-radius: 50%;
+  display: inline-block;
+  border-width: 2px;
+}
+
+.floating {
   box-shadow: 2px 12px 12px 0 rgba(88, 119, 167, 0.17);
 }
 
@@ -72,12 +90,6 @@ h1 {
 .circle-medium {
   width: 124px;
   height: 124px;
-}
-
-.string-line {
-  width: 1px;
-  height: 130px;
-  background-color: #3b3f4f;
 }
 
 .subtitle {
@@ -95,10 +107,20 @@ h1 {
   line-height: 1.47;
   letter-spacing: 0.2px;
   text-align: center;
-  color: #202020;
+  color: #9398af;
 }
 
-/* 여기까지가 zeplin css*/
+.icon {
+  width: 64px;
+  height: 64px;
+  margin: 30px;
+  object-fit: contain;
+}
+
+.white {
+  background-color: #ffffff;
+}
+
 body {
   background-color: #eff0f4;
 }
@@ -113,7 +135,7 @@ div {
 }
 
 .space-large {
-  margin-top: 180px;
+  margin-top: 160px;
 }
 .space-medium {
   margin-top: 75px;
@@ -124,6 +146,17 @@ div {
 
 .deletemargin {
   margin: 0px auto;
+}
+
+.overlap-left {
+  margin-left: -22px;
+}
+.overlap-top {
+  margin-top: -16px;
+}
+
+.img-step1 {
+  width: 232px;
 }
 
 /*# sourceMappingURL=styles.css.map */

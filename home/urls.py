@@ -21,6 +21,7 @@ from django.conf.urls import url, include
 urlpatterns = [
     path('', views.main, name='main'),
     path('test/', views.test, name='test'),
+    # path('accounts/logout/', views.logout, name='logout'),
     # url(r'^$', views.index, name='index'),
     # url(r'', include('home.urls')),
     # path('', include('home.urls'))

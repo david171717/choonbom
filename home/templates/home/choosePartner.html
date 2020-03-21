@@ -1,28 +1,44 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-	<meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>춘;봄</title>
-</head>
+{% extends 'home/base.html' %}
+{% load staticfiles %}
+{% load socialaccount %}
+
+
+{% block content %}
+
 <body>
 	<div id = "header">
 		<div class="space-small mid">
 			<div class="flag deletemargin">
 				Step 1
 			</div>
-			<h1>
+			<h1 style = "margin-top: 5px;">
 				누구와 결혼하나요?
 			</h1>
 		</div>
 	</div>
 	<div id = "content">
-			<div class="space-mid">
-				<span>
-					<img class="avatar circle-medium" src="img/avatar.png" alt="프로필">
+			<div class="space-medium">
+				<span class="img-step1 mid">
+					<img class="avatar circle-medium" src='{% static "img/avatar.png" %}' alt="프로필">
+					<span class="avatar circle-medium white overlap-left">
+						<img class="icon" src='{% static "img/quesiton.svg" %}'alt="프로필">
+					</span>
 				</span>
+			</div>
+
+			<div class="space-medium">
+				<form action="#">
+					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mid">
+						<input class="mdl-textfield__input" type="text" id="spouser_name">
+						<label class="mdl-textfield__label" for="sample3">배우자의 이름</label>
+					</div>
+				</form>
+			</div>
+
+			<div class="space-medium">
+				<a class="btn-flat mid" href="chooseweddinghall.html">다음 단계로</a>
 			</div>
 	</div>
 </body>
-</html>
+
+{% endblock %}

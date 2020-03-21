@@ -28,6 +28,19 @@ DEBUG = True
 ALLOWED_HOSTS = ['*']
 
 
+
+
+SITE_ID = 1
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+LOGOUT_URL='/'
+ACCOUNT_LOGOUT_REDIRECT_URL = '/'
+
+
+
+
+
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -149,6 +162,3 @@ AUTHENTICATION_BACKENDS = (
     'allauth.account.auth_backends.AuthenticationBackend',
 )
 
-SITE_ID = 1
-LOGIN_REDIRECT_URL = '/'
-# LOGOUT_REDIRECT_URL = '/'

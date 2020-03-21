@@ -1,16 +1,11 @@
+{% extends 'home/base.html' %}
 {% load staticfiles %}
 {% load socialaccount %}
 {% providers_media_js %}
 
-<!DOCTYPE html>
-<html lang="ko">
-	<head>
-		<meta charset="UTF-8">
-		<link rel="stylesheet" type="text/css" href='{% static "css/styles.css" %}'>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>춘;봄</title>
-	</head>
-	<body>
+
+{% block content %}
+
 {%if user.is_authenticated %}
 		<div id = "header">
 			<div class="string-line deletemargin mid"></div>
@@ -19,14 +14,15 @@
 			</div>
 		</div>
 		<div id = "content">
-			<div><h1> {{user.username}} 님, 환영합니다.</h1></div>
+			<div><h1> {{user.email}} 님, 환영합니다.</h1></div>
 			<div class="space-mid"></div>
-				<button class="fab mid space-medium" onclick="window.location.href = 'choosePartner.html';">
+				<a href = "/choosePartner"><button class="fab mid space-medium">
 					청첩장 만들기
-				</button>
+				</button></a>
 		</div>
 
-			<a href="/accounts/logout">로그아웃</a> <br>
+			<!-- <a href="/accounts/logout">로그아웃</a> <br> -->
+			<a href="/logout">로그아웃</a> <br>
 
 {% else %}
 		<div id = "header">
@@ -42,7 +38,7 @@
 			<div class="space-large">
 				<!-- <button class = "fab-bg mid" onclick="window.location.href = '/accounts/signup';">구글 아이디로<br>회원가입하기
 				</button> -->
-			<a href="/accounts/signup">회원가입</a> <br>
+			<!-- <a href="/accounts/signup">회원가입</a> <br> -->
 			<!-- <a href = "{% provider_login_url 'google' %}"> <button class = "fab-bg mid">구글 아이디로<br>회원가입하기 </button></a> -->
 
 			<a href = "{% provider_login_url 'google' %}"><button class = "fab mid">구글 아이디로<br>로그인하기
@@ -58,4 +54,5 @@
 
 {% endif %}
 	</body>
-</html>
+
+{% endblock %}
