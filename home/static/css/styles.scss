@@ -1,0 +1,208 @@
+/* html 기본 속성 제거 */
+
+body>* {
+  all: unset;
+}
+
+/* 컬러 속성 */
+
+$salmon: #ff7272;
+$charcoal-grey: #3b3f4f;
+$stormy-blue-17: rgba(88, 119, 167, 0.17);
+$black: #202020;
+$pale-grey: #eff0f4;
+$bluey-grey: #9398af;
+$white: #ffffff;
+
+/* 폰트 속성 */
+
+@font-face {
+  font-family: 'MapoFlowerIsland';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoFlowerIslandA.woff') format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1 {
+  font-family: MapoFlowerIsland;
+  font-size: 22px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.3;
+  letter-spacing: -1.01px;
+  text-align: center;
+  color: $black;
+}
+
+@mixin flag {
+  font-family: AppleSDGothicNeo;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.47;
+  letter-spacing: 0.2px;
+  text-align: center;
+  color: $bluey-grey;
+}
+
+@mixin inputplaceholder {
+  font-family: AppleSDGothicNeo;
+  font-size: 15px;
+  letter-spacing: 0.43px;
+  color: $bluey-grey;
+}
+
+@mixin btnfab {
+  font-family: AppleSDGothicNeo;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.48;
+  letter-spacing: 0px;
+  text-align: center;
+  color: $black;
+}
+
+@mixin subtitle {
+  font-family: AppleSDGothicNeo;
+  font-size: 14px;
+  letter-spacing: 0.46px;
+  text-align: center;
+  color: #666c85;
+}
+
+@mixin btnflat {
+  font-family: AppleSDGothicNeo;
+  font-size: 13.5px;
+  font-weight: 500;
+  letter-spacing: 0.55px;
+  text-align: center;
+  color: $black;
+}
+
+@mixin btnflat-lv2 {
+  @include btnflat;
+  font-weight: 400;
+  color: $bluey-grey;
+}
+
+/* 컴포넌트 속성*/
+
+.fab {
+  width: 116px;
+  height: 116px;
+  box-shadow: -4px -4px 5px 0 rgba(255, 255, 255, 0.7), 4px 4px 13px 0 $stormy-blue-17;
+  background-color: $pale-grey;
+  border-radius: 58px;
+  border: 0px;
+  @include btnfab;
+}
+
+.string-line {
+  width: 1px;
+  height: 90px;
+  background-color: $bluey-grey;
+}
+
+.btn-flat {
+  @include btnflat;
+}
+
+.btn-flat-lv2 {
+  @include btnflat-lv2;
+}
+
+.small {
+  width: 32px;
+  height: 1px;
+  background-color: $charcoal-grey;
+}
+
+.avatar {
+  border-radius: 50%;
+  display: inline-block;
+  border-width: 2px;
+
+}
+
+.floating {
+  box-shadow: 2px 12px 12px 0 $stormy-blue-17;
+}
+
+.circle {
+
+  &-large {
+    width: 177px;
+    height: 177px;
+  }
+
+  &-medium {
+    width: 124px;
+    height: 124px;
+  }
+
+}
+
+.subtitle {
+  @include subtitle;
+}
+
+.flag {
+  @include flag;
+}
+
+.icon {
+  width: 64px;
+  height: 64px;
+  margin: 30px;
+  object-fit: contain;
+}
+
+.white {
+  background-color: $white;
+}
+
+body {
+  background-color: $pale-grey;
+}
+
+div {
+  margin: 30px auto;
+}
+
+.mid {
+  display: block;
+  margin: auto;
+}
+
+.space {
+  &-large {
+    margin-top: 160px;
+  }
+
+  &-medium {
+    margin-top: 75px;
+  }
+
+  &-small {
+    margin-top: 56px;
+  }
+}
+
+.deletemargin {
+  margin: 0px auto;
+}
+
+.overlap {
+  &-left {
+    margin-left: -22px;
+  }
+  &-top {
+    margin-top: -16px;
+  }
+}
+
+.img {
+  &-step1 {
+    width: 124px * 2 - 22px + 6px;
+  }
+}
