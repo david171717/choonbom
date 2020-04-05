@@ -1,0 +1,56 @@
+{% extends 'home/base.html' %}
+{% load staticfiles %}
+{% load socialaccount %}
+
+
+{% block content %}
+
+<body>
+	<div id="header">
+		<div class="space-small mid">
+			<div class="flag deletemargin">
+				Step 3
+			</div>
+			<h1 style="margin-top: 5px;">
+				어떤 분들을 모시나요?
+			</h1>
+		</div>
+	</div>
+	<div id="content">
+		<div class="subtitle space-medium fitinput">내 부모님
+			<form action="#">
+				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mid space-tiny">
+					<input class="mdl-textfield__input" type="text" id="my_dad">
+					<label class="mdl-textfield__label" for="my_dad">아버님 성함</label>
+				</div>
+			</form>
+			<form action="#">
+				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mid">
+					<input class="mdl-textfield__input" type="text" id="my_mom">
+					<label class="mdl-textfield__label" for="my_mom">어머님 성함</label>
+				</div>
+			</form>
+		</div>
+		<div class="subtitle space-medium fitinput">배우자의 부모님
+			<form action="#">
+				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mid space-tiny">
+					<input class="mdl-textfield__input" type="text" id="spouser_dad">
+					<label class="mdl-textfield__label" for="spouser_dad">아버님 성함</label>
+				</div>
+			</form>
+			<form action="#">
+				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mid">
+					<input class="mdl-textfield__input" type="text" id="spouser_mom">
+					<label class="mdl-textfield__label" for="spouser_mom">어머님 성함</label>
+				</div>
+			</form>
+		</div>
+
+		<div class="space-medium fitinput">
+			<a class="btn-flat-lv2" href="/choosePlace">이전 단계로</a>
+			<a class="btn-flat aligntoright" href="decorate.html">다음 단계로</a>
+		</div>
+	</div>
+</body>
+
+{% endblock %}

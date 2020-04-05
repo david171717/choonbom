@@ -96,7 +96,7 @@ h1 {
   font-family: AppleSDGothicNeo;
   font-size: 14px;
   letter-spacing: 0.46px;
-  text-align: center;
+  text-align: left;
   color: #666c85;
 }
 
@@ -143,6 +143,9 @@ div {
 .space-small {
   margin-top: 56px;
 }
+.space-tiny {
+  margin-top: 28px;
+}
 
 .deletemargin {
   margin: 0px auto;
@@ -157,6 +160,15 @@ div {
 
 .img-step1 {
   width: 232px;
+}
+
+.fitinput {
+  width: 300px;
+}
+
+.aligntoright {
+  text-align: right;
+  margin-left: 160px;
 }
 
 /*# sourceMappingURL=styles.css.map */

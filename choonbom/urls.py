@@ -23,6 +23,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
     path('choosePartner/', views.choosePartner, name='choosePartner'),
+    path('choosePlace/', views.choosePlace, name='choosePlace'),
+    path('chooseFamily/', views.chooseFamily, name='chooseFamily'),
+
     # path('accounts/logout/', views.logout, name='logout'),
 	path('logout/', LogoutView.as_view()),
     # path('logout/', views.logout, name='logout'),

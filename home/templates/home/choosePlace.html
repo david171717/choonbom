@@ -1,0 +1,46 @@
+{% extends 'home/base.html' %}
+{% load staticfiles %}
+{% load socialaccount %}
+
+
+{% block content %}
+
+<body>
+	<div id = "header">
+		<div class="space-small mid">
+			<div class="flag deletemargin">
+				Step 2
+			</div>
+			<h1 style = "margin-top: 5px;">
+				어디서 결혼하나요?
+			</h1>
+		</div>
+	</div>
+	<div id = "content">
+			<div class="space-medium">
+					<span class="avatar circle-medium white mid">
+						<img class="icon" src="img/location.svg" alt="프로필">
+					</span>
+				
+			</div>
+			<form action="#">
+				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label has-placeholder mid">
+					<input class="mdl-textfield__input" type="date" id="date">
+					<label class="mdl-textfield__label" for="date"></label>
+				</div>
+			</form>
+			<form action="#">
+				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mid">
+					<input class="mdl-textfield__input" type="text" id="location"">
+					<label class="mdl-textfield__label" for="location">결혼식 장소</label>
+				</div>
+			</form>
+
+		<div class="space-medium fitinput">
+			<a class="btn-flat-lv2" href="/choosePartner">이전 단계로</a>
+			<a class="btn-flat aligntoright" href="/chooseFamily">다음 단계로</a>
+		</div>
+	</div>
+</body>
+
+{% endblock %}

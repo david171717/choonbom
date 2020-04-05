@@ -16,4 +16,10 @@ def logout(request):
 def choosePartner(request):
 	return render(request, 'home/choosePartner.html', {})
 
+def choosePlace(request):
+	return render(request, 'home/choosePlace.html', {})
+
+def chooseFamily(request):
+	return render(request, 'home/chooseFamily.html', {})
+
 # Create your views here.
