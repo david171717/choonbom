@@ -27,12 +27,15 @@
 			</div>
 
 			<div class="space-medium">
-				<form action="#">
+
+				<form action="{% url 'choosePlace' user.id %}" method="POST">
+				{% csrf_token %}
 					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mid">
-						<input class="mdl-textfield__input" type="text" id="spouser_name">
+						<input class="mdl-textfield__input" type="text" id="spouser_name" name= "your_name" >
 						<label class="mdl-textfield__label" for="sample3">배우자의 이름</label>
 					</div>
 				</form>
+				
 			</div>
 
 			<div class="space-medium">

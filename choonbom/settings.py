@@ -162,3 +162,4 @@ AUTHENTICATION_BACKENDS = (
     'allauth.account.auth_backends.AuthenticationBackend',
 )
 
+ # APPEND_SLASH=False 

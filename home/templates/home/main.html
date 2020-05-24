@@ -6,25 +6,34 @@
 
 {% block content %}
 
+	<body>
 {%if user.is_authenticated %}
 		<div id = "header">
 			<div class="string-line deletemargin mid"></div>
 			<div class="deletemargin">
 				<img class="avatar circle-large mid" src='{% static "img/avatar.png" %}' alt="프로필">
+				<img class="mid overlap-top" src='{%static "img/holder.svg" %}' class="holder">
 			</div>
 		</div>
+
 		<div id = "content">
-			<div><h1> {{user.username}} 님, 환영합니다.</h1></div>
+			<div><h1> {{user.firstname}} {{user.lastname}} 님, 환영합니다.</h1></div>
+		
+ 
 			<div class="space-mid"></div>
-				<a href = "/choosePartner"><button class="fab mid space-medium">
+				<!-- <a href = "/choosePartner/"><button class="fab mid space-medium"> -->
+			<a href = "{% url 'myinfo' user.id %}"><button class="fab mid space-medium">
 					청첩장 만들기
-				</button></a>
+			</button></a>
+
 		</div>
 
 			<!-- <a href="/accounts/logout">로그아웃</a> <br> -->
 		<div class="mid">
 			<a class="btn-flat-lv2 mid" href="/logout">로그아웃</a>
 		</div>
+		
+
 
 {% else %}
 		<div id = "header">

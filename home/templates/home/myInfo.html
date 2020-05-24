@@ -1,0 +1,53 @@
+{% extends 'home/base.html' %}
+{% load staticfiles %}
+{% load socialaccount %}
+
+
+{% block content %}
+
+<body>
+	<div id = "header">
+		<div class="space-small mid">
+			<div class="flag deletemargin">
+				Step 0
+			</div>
+			<title style = "margin-top: 5px;">
+				시작하기 앞서...
+			</title>
+		</div>
+	</div>
+	<div id = "content">
+		<div class="space-large"></div>
+
+
+		<form action="{% url 'choosePartner' user.id %}" method="POST">
+			{% csrf_token %}
+			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mid">
+				<input class="mdl-textfield__input" type="text" id="spouser_mom" name="my_name" value="my_name">
+				<label class="mdl-textfield__label" for="spouser_mom">내 이름</label>
+			</div>
+		
+		<div class="radio-label fitinput" style="margin-bottom : 16px; margin-top: 16px;">내 성별</div>
+		<div class="radiodiv fitinput">
+			<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="female">
+				<input type="radio" id="female" class="mdl-radio__button" name="my_gender" value="1" checked>
+				<span class="mdl-radio__label">여자</span>
+			</label>
+			<label style="margin-left : 20px" class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="male">
+				<input type="radio" id="male" class="mdl-radio__button" name="my_gender" value="my_gender">
+				<span class="mdl-radio__label">남자</span>
+			</label>
+		</div>
+
+		<div class="fitinput space-medium">
+			<a class="btn-flat-lv2" href="{% url 'main' user.id %}">이전 단계로</a>
+			<a class="btn-flat aligntoright" href="{% url 'choosePartner' user.id %}">다음 단계로</a>
+		</div>
+
+		</form>
+
+	</div>
+</body>
+</html>
+
+{% endblock %}
