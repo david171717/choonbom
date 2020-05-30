@@ -2,6 +2,9 @@ from django.shortcuts import get_object_or_404, render
 from allauth.templates import account
 from .models import Wedding
 from django.contrib.auth.models import User
+from django.shortcuts import resolve_url
+from django.shortcuts import redirect
+
 
 
 def main(request):
@@ -21,14 +24,17 @@ def myinfo(request, uid):
 	user = User.objects.get(pk = uid)
 
 	print("1")
+	print(user)
 
-	if Wedding.objects.filter(user_id = user, my_name = ).exists():
+	if Wedding.objects.filter(user_id = user).exists():
 		wuser = Wedding.objects.get(user_id = user)
+		print(wuser)
 
 		print("2")
 		# context = {'my_name' : wuser.my_name, 'my_gender' : wuser.my_gender}
 		print("3")
 		return render(request, 'home/myinfo.html', {})
+		# return resolve_url('myinfo', user.id)
 
 	else:
 		print("4")
