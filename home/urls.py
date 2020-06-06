@@ -24,6 +24,7 @@ from django.contrib.auth.views import LogoutView
 # app_name = 'home'
 urlpatterns = [
     path('', views.main, name='main'),
+    # path('<int:uid>/', views.signcomplete, name='signcomplete'),
     # path('test/', views.test, name='test'),
     path('accounts/', include('allauth.urls')),
     # path('choosePartner/', views.choosePartner, name='choosePartner'),

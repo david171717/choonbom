@@ -11,8 +11,8 @@ class Wedding(models.Model):
 	my_name = models.TextField(null=True)
 	your_name = models.TextField(null=True)
 
-	my_gender = models.BooleanField(null=True)
-	your_gender = models.BooleanField(null=True)
+	my_gender = models.IntegerField(null=True)
+	your_gender = models.IntegerField(null=True)
 
 	myfather_name = models.TextField(null=True)
 	mymother_name = models.TextField(null=True)
